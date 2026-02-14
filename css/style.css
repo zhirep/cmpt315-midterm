@@ -64,7 +64,7 @@ body {
 .site-nav a {
     color: #222;
     text-decoration: none;
-    padding: 10px 16px;
+    padding: 5px 15px;
     display: inline-block;
     border-radius: 999px;
     background: #6398ba;
@@ -114,6 +114,17 @@ body {
     margin-top: 8px;
 }
 
+.thumb {
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.expanded {
+    background-color: #41667d;
+    border-radius: 12px;
+    color: #222;
+    transform: scale(1.05);
+}
+
 .mission {
     background: #41667d;
     border: #41667d;
@@ -150,15 +161,12 @@ td img {
     border-radius: 8px;
 }
 
-input:not(:placeholder-shown):invalid {
-    border: 2px solid red;
+.error-border {
+    border-color: red !important;
+    background-color: #fff0f0;
 }
 
-input:not(:placeholder-shown):valid {
-    border: 2px solid green;
-}
-
-@media (max-width: 600px) {
+@media (max-width: 375px) {
     .main-card {
         grid-template-columns: 1fr;
     }
